@@ -19,16 +19,23 @@ def area_of_rectangle():
 
 #function to choose the area of the object I want calculated.
 def function_chooser():
-    chosen_area = int(input("Choose the object you want to calculate area of:\n 1. rectangle or square \n 2. Triangle \n Answer: ",))
+    chosen_area = int(input("Choose the object you want to calculate area of, or enter 10 to exit: \
+                            \n 1. rectangle or square \n 2. Triangle \n Answer: ",))
     
     #Loop to allow the user to make a correct object choice.
     while True:
-        if chosen_area == 1:
+        if chosen_area == 10:
+            print("You have chosen to exit this calculator. Bye!")
+            break
+        elif chosen_area == 1:
             area_of_rectangle()
             break
         elif chosen_area == 2:
             area_of_triangle()
             break
+        else:
+            chosen_area = int(input("Choose the object you want to calculate area of, or enter to 10 exit\
+                                    \n 1. rectangle or square \n 2. Triangle \n Answer: ",))
             
 
 function_chooser()
